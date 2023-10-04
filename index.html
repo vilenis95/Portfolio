@@ -24,7 +24,7 @@
                     <nav class="navigation">
                         <ul class="navigation__list">
                             <li class="navigation__item">
-                                <a href="" class="navigation__link active">
+                                <a href="" class="navigation__link active" id="homeBtn">
                                     <svg class="navigation-icon__wrapper" width="24" height="24">
                                         <use class="navigation__icon" href="./img/symbol-defs.svg#icon-home"></use>
                                       </svg>
@@ -32,7 +32,7 @@
                                 </a>
                             </li>
                             <li class="navigation__item">
-                                <a href="" class="navigation__link">
+                                <a href="" class="navigation__link" id="resumeBtn">
                                     <svg class="navigation-icon__wrapper" width="24" height="24">
                                         <use class="navigation__icon" href="./img/symbol-defs.svg#icon-resume"></use>
                                       </svg>
@@ -40,7 +40,7 @@
                                 </a>
                             </li>
                             <li class="navigation__item">
-                                <a href="" class="navigation__link">
+                                <a href="" class="navigation__link" id="workBtn">
                                     <svg class="navigation-icon__wrapper" width="24" height="24">
                                         <use class="navigation__icon" href="./img/symbol-defs.svg#icon-work"></use>
                                       </svg>
@@ -48,7 +48,7 @@
                                 </a>
                             </li>
                             <li class="navigation__item">
-                                <a href="" class="navigation__link">
+                                <a href="" class="navigation__link" id="blogBtn">
                                     <svg class="navigation-icon__wrapper" width="24" height="24">
                                         <use class="navigation__icon" href="./img/symbol-defs.svg#icon-blog"></use>
                                       </svg>
@@ -56,7 +56,7 @@
                                 </a>
                             </li>
                             <li class="navigation__item">
-                                <a href="" class="navigation__link">
+                                <a href="" class="navigation__link" id="contactBtn">
                                     <svg class="navigation-icon__wrapper" width="24" height="24">
                                         <use class="navigation__icon" href="./img/symbol-defs.svg#icon-contact"></use>
                                       </svg>
@@ -241,7 +241,10 @@
                         </ul>
                     </section>
 
-                    <section class="portfolio right" style="display: none;">
+                    <section class="resume right no-active">
+                    </section>
+
+                    <section class="portfolio right no-active">
                         <div class="work_heading">
                             <h2 class="portfolio__title title-h2"><span class="title-h2__text">Portfolio</span> <span class="title-h2__line"></span></h2>
                         </div>
@@ -326,6 +329,36 @@
 
                             <button id="addBlockButton">Add card</button>
                         </div>
+                    </section>
+
+                    <section class="blog no-active">
+                        <h2 class="blog__title title-h2"><span class="title-h2__text">Blog</span><span class="title-h2__line"></span>
+                        </h2>
+                    
+                        <div class="blog_card card-one">
+                            <div>
+                                <h3></h3>
+                                <p> </p>
+                            </div>
+                            <a href="">Читати далі</a>
+                        </div>
+                        <div class="blog_card card-two">
+                            <div>
+                                <h3></h3>
+                                <p></p>
+                                <a href="">Читати далі</a>
+                            </div>
+                        </div>
+                        <div class="blog_card card-three">
+                            <div>
+                                <h3></h3>
+                                <p></p>
+                                <a href="">Читати далі</a>
+                            </div>
+                        </div>
+                    </section>
+                    
+                    <section class="contact right no-active">
                     </section>
                 </div>
             </main>

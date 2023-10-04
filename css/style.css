@@ -677,3 +677,61 @@ textarea {
     cursor: pointer;
     margin: 0 auto;
   }
+
+
+   /* BLOG */
+   .no-active {
+    display: none;
+  }
+
+  .blog {
+    width: 100%;
+    padding: 28px 54px 32px 73px;
+    background: var(--color-white);
+    box-shadow: var(--box-shadow);
+    border-radius: var(--border-radius);
+  }
+
+  .blog .blog_card {
+    width: 100%;
+    margin-bottom: 20px;
+    border-radius: var(--border-radius);
+    padding: 15px;
+  }
+
+  .blog .blog__title.title-h2 {
+    margin-bottom: 42px;
+  }
+
+  .blog .blog_card.card-one {
+    background: #FFE3BF;
+  }
+
+  .blog .blog_card.card-two {
+    background: #FFF4E5;
+  }
+
+  .blog .blog_card.card-three {
+    background: #FFEED9;
+  }
+
+  .blog .blog_card p {
+    margin-top: 15px;
+    margin-bottom: 15px;
+  }
+
+  .blog .blog_card a {
+    background: var(--color-buttons);
+    border-radius: var(--border-radius);
+    color: white;
+    padding: 8px 10px;
+    transition: .6s all;
+    display: inline-block;
+    transform: scale(1);
+  }
+
+  .blog .blog_card a:hover {
+    color: var(--color-background);
+    transition: 0.3s all;
+    transform: scale(1.1);
+  }
