@@ -4,9 +4,241 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:wght@400;500;600&family=Raleway:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
-    
+    <div class="wrapper">
+        <div class="container">
+            <header class="header">
+                <h1 class="header__title">Beatrice <span class="header__title--accent">Wambui</span></h1>
+            </header>
+            <main>
+                <section class="section-navigation">
+                    <nav class="navigation">
+                        <ul class="navigation__list">
+                            <li class="navigation__item">
+                                <a href="" class="navigation__link active">
+                                    <svg class="navigation-icon__wrapper" width="24" height="24">
+                                        <use class="navigation__icon" href="./img/symbol-defs.svg#icon-home"></use>
+                                      </svg>
+                                    <div class="navigation__text">Home</div>
+                                </a>
+                            </li>
+                            <li class="navigation__item">
+                                <a href="" class="navigation__link">
+                                    <svg class="navigation-icon__wrapper" width="24" height="24">
+                                        <use class="navigation__icon" href="./img/symbol-defs.svg#icon-resume"></use>
+                                      </svg>
+                                    <div class="navigation__text">Resume</div>
+                                </a>
+                            </li>
+                            <li class="navigation__item">
+                                <a href="" class="navigation__link">
+                                    <svg class="navigation-icon__wrapper" width="24" height="24">
+                                        <use class="navigation__icon" href="./img/symbol-defs.svg#icon-work"></use>
+                                      </svg>
+                                    <div class="navigation__text">Work</div>
+                                </a>
+                            </li>
+                            <li class="navigation__item">
+                                <a href="" class="navigation__link">
+                                    <svg class="navigation-icon__wrapper" width="24" height="24">
+                                        <use class="navigation__icon" href="./img/symbol-defs.svg#icon-blog"></use>
+                                      </svg>
+                                    <div class="navigation__text">Blog</div>
+                                </a>
+                            </li>
+                            <li class="navigation__item">
+                                <a href="" class="navigation__link">
+                                    <svg class="navigation-icon__wrapper" width="24" height="24">
+                                        <use class="navigation__icon" href="./img/symbol-defs.svg#icon-contact"></use>
+                                      </svg>
+                                    <div class="navigation__text">Contact</div>
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+                </section>
+
+                <div class="page">
+                    <section class="contacts left">
+                        <div class="contacts-image__wrapper">
+                            <img src="./img/photo.jpg" alt="Beatrice Wambui photo" class="contacts__image">
+                        </div>
+                        <h2 class="contacts__title">Beatrice Wambui</h2>
+                        <h3 class="contacts__subtitle">FullStack Developer</h3>
+
+                        <ul class="social__list">
+                            <li class="social__item">
+                                <a href="#" class="social__link">
+                                    <svg class="social-icon__wrapper" width="11" height="20">
+                                        <use class="social__icon" href="./img/symbol-defs.svg#icon-facebook"></use>
+                                    </svg>
+                                </a>
+                            </li>
+                            <li class="social__item">
+                                <a href="#" class="social__link">
+                                    <svg class="social-icon__wrapper" width="16" height="15">
+                                        <use class="social__icon" href="./img/symbol-defs.svg#icon-instagram"></use>
+                                    </svg>
+                                </a>
+                            </li>
+                            <li class="social__item">
+                                <a href="#" class="social__link">
+                                    <svg class="social-icon__wrapper" width="17" height="14">
+                                        <use class="social__icon" href="./img/symbol-defs.svg#icon-twitter"></use>
+                                      </svg>
+                                </a>
+                            </li>
+                            <li class="social__item">
+                                <a href="#" class="social__link">
+                                    <svg class="social-icon__wrapper" width="17" height="17">
+                                        <use class="social__icon" href="./img/symbol-defs.svg#icon-github"></use>
+                                    </svg>
+                                </a>
+                            </li>
+                        </ul>
+
+                        <div class="contacts__bottom">
+                            <ul class="contacts__list">
+                                <li class="contacts__item">
+                                    <a href="tel:+254723909353" class="contact__link">
+                                       <div class="contacts-icon__wrapper">
+                                        <svg width="22" height="30">
+                                            <use class="contacts__icon" href="./img/symbol-defs.svg#icon-phone"></use>
+                                        </svg>
+                                       </div>
+                                        <div class="contacts__description">
+                                            <div class="contacts__name">Phone</div>
+                                            <div class="contacts__text">+254723909353</div>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="contacts__item">
+                                    <a href="mailto:beatricewambuimbugua@gmail.com" class="contact__link">
+                                        <div class="contacts-icon__wrapper">
+                                            <svg width="25" height="25">
+                                                <use class="contacts__icon" href="./img/symbol-defs.svg#icon-mail"></use>
+                                            </svg>
+                                        </div>
+                                        <div class="contacts__description">
+                                            <div class="contacts__name">Email</div>
+                                            <div class="contacts__text">beatricewambuimbugua@gmail.com</div>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="contacts__item">
+                                    <a href="https://maps.app.goo.gl/VmcZEvUAjuUjTcTH9" class="contact__link">
+                                        <div class="contacts-icon__wrapper">
+                                            <svg width="24" height="30">
+                                                <use class="contacts__icon" href="./img/symbol-defs.svg#icon-location"></use>
+                                            </svg>
+                                        </div>
+                                        <div class="contacts__description">
+                                            <div class="contacts__name">Location</div>
+                                            <div class="contacts__text">Nairobi, Kenya</div>
+                                        </div>
+                                    </a>
+                                </li>
+                            </ul>
+
+                            <button class="contacts__button">
+                                <svg class="contacts-button-icon__wrapper" width="24" height="24">
+                                    <use class="contacts-button__icon" href="./img/symbol-defs.svg#icon-download"></use>
+                                </svg>
+                                <span class="contacts-button__text">Download Resume</span>
+                            </button>
+                        </div>
+
+                    </section>
+
+                    <section class="about-me right">
+                        <h2 class="about-me__title title-h2"><span class="title-h2__text">ABOUT ME</span><span class="title-h2__line"></span></h2>
+                        <p class="about-me__description">Hello there! I'm thrilled to welcome you to my portfolio. I am a passionate and versatile
+                            full-stack developer with a keen interest in exploring the latest cutting-edge technologies.
+                            My journey in the world of web development has been nothing short of exhilarating, and 
+                            I constantly strive to enhance my skills and embrace emerging trends in the industry.</p>
+
+                        <h3 class="about-me__subtitle title-h3">What I do!</h3>
+
+                        <ul class="about-me__list do__list">
+                            <li class="do__item">
+                                <h4 class="do__title title-h4">
+                                    <span class="about-me-icon__wrapper">
+                                        <svg width="24" height="24">
+                                            <use class="about-me__icon" href="./img/symbol-defs.svg#icon-code"></use>
+                                        </svg>
+                                    </span>
+                                    <span>Web Development</span>
+                                </h4>
+                                <p class="do__description">
+                                    As a developer, I find myself most 
+                                    captivated by the power and flexibility of 
+                                    NEXT.js. I'm always eager to dive into new
+                                    projects that leverage NEXT.js and 
+                                    discover innovative ways to create fast, 
+                                    scalable, and user-friendly applications.
+                                </p>
+                            </li>
+                            <li class="do__item">
+                                <h4 class="do__title title-h4">
+                                    <span class="about-me-icon__wrapper">
+                                        <svg width="24" height="24">
+                                            <use class="about-me__icon" href="./img/symbol-defs.svg#icon-app"></use>
+                                        </svg>
+                                    </span>
+                                    <span>App Development</span>
+                                </h4>
+                                <p class="do__description">
+                                    With a focus on user-centric design and
+                                    cutting-edge technologies, I thrive on 
+                                    building intuitive and efficient apps 
+                                    that make a positive impact on people's 
+                                    lives. Let's turn ideas into reality and 
+                                    shape the future together.
+                                </p>
+                            </li>
+                            <li class="do__item">
+                                <h4 class="do__title title-h4">
+                                    <span class="about-me-icon__wrapper">
+                                        <svg width="24" height="24">
+                                            <use class="about-me__icon" href="./img/symbol-defs.svg#icon-ux"></use>
+                                        </svg>
+                                    </span>
+                                    <span>UI/UX Designing</span>
+                                </h4>
+                                <p class="do__description">
+                                    Crafting visually appealing and intuitive user
+                                    interfaces that offer a delightful user 
+                                    experience is something I'm truly fanatic 
+                                    about.
+                                </p>
+                            </li>
+                            <li class="do__item">
+                                <h4 class="do__title title-h4">
+                                    <span class="about-me-icon__wrapper">
+                                        <svg width="24" height="24">
+                                            <use class="about-me__icon" href="./img/symbol-defs.svg#icon-mentor"></use>
+                                        </svg>
+                                    </span>
+                                    <span>Mentorship</span>
+                                </h4>
+                                <p class="do__description">
+                                    I have also found great joy in sharing my 
+                                    knowledge with others. Being a technical 
+                                    mentor allows me to give back to the 
+                                    community that has supported me 
+                                    throughout my career. 
+                                </p>
+                            </li>
+                        </ul>
+                    </section>
+                </div>
+            </main>
+        </div>
+    </div>
 </body>
 </html>
