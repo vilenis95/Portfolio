@@ -240,9 +240,99 @@
                             </li>
                         </ul>
                     </section>
+
+                    <section class="portfolio right" style="display: none;">
+                        <div class="work_heading">
+                            <h2 class="portfolio__title title-h2"><span class="title-h2__text">Portfolio</span> <span class="title-h2__line"></span></h2>
+                        </div>
+
+                        <ul class="work_tags">
+
+                            <li class="active">
+                                <a href="#">All</a>
+                            </li>
+
+                            <li>
+                                <a href="#">App Development</a>
+                            </li>
+
+                            <li>
+                                <a href="#">Web Development</a>
+                            </li>
+
+                            <li>
+                                <a href="#">Design</a>
+                            </li>
+
+                            <li>
+                                <a href="#">Mentorship</a>
+                            </li>
+                        </ul>
+
+                        <div id="addBlockForm" style="display: none;">
+                            <label for="blockTitle">Title of the project</label>
+                            <input type="text" id="blockTitle" placeholder="Title">
+                            <label for="blockText">Description of the project</label>
+                            <textarea id="blockText" placeholder="Text"></textarea>
+                            <div class="input__wrapper">
+                                <input name="file" type="file" id="blockImage" class="input input__file" accept="image/*">
+                                <label for="blockImage" class="input__file-button">
+                                    <span class="input__file-icon-wrapper"><img class="input__file-icon" src="./img/download_img.svg" alt="Choose file" width="25"></span>
+                                    <span class="input__file-button-text">Add an image</span>
+                                </label>
+                            </div>
+                            <label for="blockCategory">Select a category:</label>
+                            <select id="blockCategory">
+                                <option value="App Development">App Development</option>
+                                <option value="Web Development">Web Development</option>
+                                <option value="Design">Design</option>
+                                <option value="Mentorship">Mentorship</option>
+                            </select>
+                            <button id="submitBlockButton">Add card</button>
+                        </div>
+                        
+
+                        <div class="portfolio_cards" id="portfolioCards">             
+
+                            <div class="card">
+                                <img src="./img/Rectangle 20.png" alt="">
+                                <p>App Development</p>
+                                <a href="#">Smart Bank App</a>
+                            </div>
+
+                            <div class="card">
+                                <img src="./img/Rectangle 22.png" alt="">
+                                <p>UI/UX</p>
+                                <a href="#">Rental</a>
+                            </div>
+
+                            <div class="card">
+                                <img src="./img/Rectangle 21.png" alt="">
+                                <p>Web Development</p>
+                                <a href="#">IdeaFlow</a>
+                            </div>
+
+                            <div class="card">
+                                <img src="./img/Rectangle 24.png" alt="">
+                                <p>Blog</p>
+                                <a href="#">NEXT.js</a>
+                            </div>
+
+                            <div class="card">
+                                <img src="./img/Rectangle 23.png" alt="">
+                                <p>Mentorship</p>
+                                <a href="#">Tech Mentor</a>
+                            </div>
+
+                            <button id="addBlockButton">Add card</button>
+                        </div>
+                    </section>
                 </div>
             </main>
         </div>
     </div>
+
+<script src="jquery.min.js"></script>
+<script src="script.js"></script>
 </body>
 </html>
