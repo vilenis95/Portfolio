@@ -51,6 +51,9 @@ textarea {
   --color-buttons: linear-gradient(91deg, #FF9C1A 7.92%, #E80505 108.2%);
   --color-buttons-hover: linear-gradient(91deg, #E80505 7.92%, #FF9C1A 108.2%);
 
+  --color--orange: #FF9C1A;
+  --color-red: #E80505;
+
   --color-text: #000000;
   --color-text-secondary: #0B0909;
   --color-text-light: rgba(11, 9, 9, 0.5);
@@ -165,6 +168,7 @@ textarea {
 }
 .navigation__icon {
   fill: rgba(26, 16, 3, 0.5);
+  transition: var(--transition);
 }
 .navigation__text {
   font-family: Raleway;
@@ -291,14 +295,14 @@ textarea {
   border-radius: var(--border-radius-small);
 }
 .contacts__icon {
-  fill: #FF9C1A;
+  fill: var(--color--orange);
   transition: var(--transition);
 }
 .contact__link:hover {
   transform: scale(1.1);
 }
 .contact__link:hover .contacts__icon {
-  fill: #E80505;
+  fill: var(--color-red);
 }
 .contacts__description {
 }
@@ -326,10 +330,11 @@ textarea {
   border-radius: var(--border-radius);
   background: var(--color-buttons);
   transform: scale(1);
-  transition: var(--transition);
+  /* transition: var(--transition); */
+  transition: .6s all;
 }
 .contacts__button:hover {
-  transform: scale(1.01);
+  transform: scale(1.02);
 }
 
 .contacts__button::before {
@@ -343,13 +348,14 @@ textarea {
   background: var(--color-buttons-hover);
   opacity: 0;
   transform: scale(1);
-  transition: var(--transition);
+  /* transition: var(--transition); */
+  transition: .6s all;
   
 }
 
 .contacts__button:hover::before {
   opacity: 1; 
-  transform: scale(1.01);
+  transform: scale(1.02);
 }
 
 
