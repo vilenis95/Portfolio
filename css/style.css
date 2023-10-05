@@ -370,7 +370,6 @@ textarea {
   color: var(--color-light-blue);
   font-family: Raleway;
   font-size: 12px;
-  font-style: normal;
   font-weight: 600;
   line-height: 1; 
   z-index: 99;
@@ -739,10 +738,11 @@ textarea {
 
 
 
-  /* Contacts */
 
 
 
+
+/* Общие стили для контакта */
 .contact {
   padding: 28px 54px 32px 73px;
   background: var(--color-white);
@@ -750,67 +750,132 @@ textarea {
   border-radius: var(--border-radius);
 }
 
-
-  .contact__info {
-    display: flex;
-    gap: 27px;
-    margin-top: 10px;
-  }
-
-.phone__block {
-  background-color: var(--color-phoneBlock);
-  width: 333px;
-  border-radius: 20px;
-
-}
-
-.phone__block__info {
+.contact__info {
   display: flex;
-  gap: 10px;
-  margin-left: 26px;
-  margin-top: 30px;
+  flex-wrap: wrap; 
+  gap: 27px;
+  margin-top: 10px;
 }
 
-.phone__textInfo {
-  display: flex;
-  flex-direction: column;
-  margin-left: 60px;
-  margin-bottom: 55px;
-}
 
-.phone__text {
-  font-size: 14px;
-  font-family: Poppins;
-  font-weight: 500;
-  letter-spacing: 0.35px;
-  flex-direction: column;
-
-}
-
+.phone__block,
 .email__block {
-  background-color: var(--color-emeilphoneBlock);
-  width: 333px;
+  background-color: var(--color-phoneBlock);
+  width: 100%; 
+  max-width: 333px; 
   border-radius: 20px;
 }
 
+.phone__block__info,
 .email__block__info {
   display: flex;
   gap: 10px;
   margin-left: 26px;
-  margin-top: 30px;
+  margin-top: 22px;
 }
 
+.phone__subtitle, 
+.email__subtitle {
+color: #000;
+font-family: Poppins;
+font-size: 16px;
+font-style: normal;
+font-weight: 500;
+line-height: 2.5;
+letter-spacing: 0.4px;
+}
+
+
+.phone__textInfo,
 .email__textInfo {
   display: flex;
   flex-direction: column;
   margin-left: 60px;
-  margin-bottom: 55px;
+  margin-bottom: 35px;
 }
 
+
+.phone__text,
 .email__text {
+color: rgba(0, 0, 0, 0.85);
+font-family: Poppins;
+font-size: 14px;
+font-style: normal;
+font-weight: 500;
+line-height: 1.8; 
+letter-spacing: 0.030;
+
+}
+
+@media (max-width: 768px) {
+  .contact__info {
+    flex-direction: column; 
+    gap: 15px; 
+  }
+
+  .phone__block,
+  .email__block {
+    max-width: 100%; 
+  }
+}
+
+
+
+.contacts__form {
+  border-radius: 20px;
+  background: #F1F5F5; 
+  margin-top: 32px;
+}
+
+.contacts__form-text {
+  padding: 43px 46px;
+}
+
+.contacts__text-title {
   color: #000;
-  font-family: Poppins;
-  font-size: 14px;
-  font-style: normal;
-  font-weight: 500;
+  font-family: Raleway;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.9;
+  letter-spacing: 0.04;
+  margin-bottom: 14px;
+
+}
+
+.contacts__text-active {
+ font-weight: 700;
+}
+
+
+.contacts__text {
+  color: #000;
+  font-family: Raleway;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 1.25; 
+  letter-spacing: 0.04;
+  margin-bottom: 19px;
+}
+
+.contacts__line {
+  display: block;
+  width: auto;
+  height: 2px;
+  opacity: 0.2;
+  background: #B5B5B5;
+  margin-bottom: 23px;
+}
+
+.contacts__submit-button {
+display: inline-flex;
+padding: 10px 30px;
+color: #000;
+font-family: Raleway;
+font-size: 12px;
+font-weight: 600;
+line-height: 1.66;
+border-radius: 20px;
+border: 1px solid #FD8A18;
+cursor: pointer;
+margin-top: 26px;
 }
