@@ -323,30 +323,25 @@
                         <div class="work_heading">
                             <h2 class="portfolio__title title-h2"><span class="title-h2__text">Portfolio</span> <span class="title-h2__line"></span></h2>
                         </div>
-
+                        
                         <ul class="work_tags">
-
                             <li class="active">
                                 <a href="#">All</a>
                             </li>
-
                             <li>
                                 <a href="#">App Development</a>
                             </li>
-
                             <li>
                                 <a href="#">Web Development</a>
                             </li>
-
                             <li>
                                 <a href="#">Design</a>
                             </li>
-
                             <li>
                                 <a href="#">Mentorship</a>
                             </li>
                         </ul>
-
+                        
                         <div id="addBlockForm" style="display: none;">
                             <label for="blockTitle">Title of the project</label>
                             <input type="text" id="blockTitle" placeholder="Title">
@@ -366,43 +361,78 @@
                                 <option value="Design">Design</option>
                                 <option value="Mentorship">Mentorship</option>
                             </select>
-                            <button id="submitBlockButton">Add card</button>
+                            <div style="display: flex;">
+                                <button class="close-form-button">
+                                    <img src="img/back.svg" alt="">
+                                </button>
+
+                                <button id="submitBlockButton">Add card</button>
+                            </div>    
                         </div>
                         
-
-                        <div class="portfolio_cards" id="portfolioCards">             
-
+                        <div class="portfolio_cards" id="portfolioCards">
+                        
                             <div class="card">
                                 <img src="./img/Rectangle 20.png" alt="">
                                 <p>App Development</p>
                                 <a href="#">Smart Bank App</a>
+                                <div class="block-content" style="display: none;">
+                                    <p class="hidden-text">Скрытый текст, который откроется на весь экран при клике на заголовок.</p>
+                                    <button class="close-block-button">
+                                        <img src="img/back.svg" alt="">
+                                    </button>
+                                </div>
                             </div>
-
+                        
                             <div class="card">
                                 <img src="./img/Rectangle 22.png" alt="">
                                 <p>UI/UX</p>
                                 <a href="#">Rental</a>
+                                <div class="block-content" style="display: none;">
+                                    <p class="hidden-text">Скрытый текст, который откроется на весь экран при клике на заголовок.</p>
+                                    <button class="close-block-button">
+                                        <img src="img/back.svg" alt="">
+                                    </button>
+                                </div>
                             </div>
-
+                        
                             <div class="card">
                                 <img src="./img/Rectangle 21.png" alt="">
                                 <p>Web Development</p>
                                 <a href="#">IdeaFlow</a>
+                                <div class="block-content" style="display: none;">
+                                    <p class="hidden-text">Скрытый текст, который откроется на весь экран при клике на заголовок.</p>
+                                    <button class="close-block-button">
+                                        <img src="img/back.svg" alt="">
+                                    </button>
+                                </div>
                             </div>
-
+                        
                             <div class="card">
                                 <img src="./img/Rectangle 24.png" alt="">
                                 <p>Blog</p>
                                 <a href="#">NEXT.js</a>
+                                <div class="block-content" style="display: none;">
+                                    <p class="hidden-text">Скрытый текст, который откроется на весь экран при клике на заголовок.</p>
+                                    <button class="close-block-button">
+                                        <img src="img/back.svg" alt="">
+                                    </button>
+                                </div>
                             </div>
-
+                        
                             <div class="card">
                                 <img src="./img/Rectangle 23.png" alt="">
                                 <p>Mentorship</p>
                                 <a href="#">Tech Mentor</a>
+                                <div class="block-content" style="display: none;">
+                                    <p class="hidden-text">Скрытый текст, который откроется на весь экран при клике на заголовок.</p>
+                                    <button class="close-block-button">
+                                        <img src="img/back.svg" alt="">
+                                    </button>
+                                </div>
                             </div>
-
-                            <button id="addBlockButton">Add card</button>
+                        
+                            <button type="button" id="addBlockButton">Add card</button>
                         </div>
                     </section>
 
