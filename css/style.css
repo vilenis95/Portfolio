@@ -703,7 +703,7 @@ textarea {
     border-radius: var(--border-radius);
 }
 
-.portfolio__title.title-h2{
+.portfolio__title.title-h2 {
     margin-left: 36px;
 }
 
@@ -715,7 +715,6 @@ textarea {
     display: flex;
     justify-content: flex-end;
 }
-
 
 .portfolio .work_tags li a {
     color: #57657A;
@@ -732,13 +731,54 @@ textarea {
     flex-wrap: wrap;
 }
 
-.portfolio .portfolio_cards .card{
+.portfolio .portfolio_cards .card {
     margin: 0 12px;
     margin-bottom: 32px;
     width: calc((100% - 48px) / 2);
     border-radius: 8px;
     background: #FFE3BF;
     padding: 8px;
+    transition: all 0.5s ease;
+}
+
+.portfolio .portfolio_cards .card.opened {
+    width: 100%;
+    height: auto;
+}
+
+.portfolio .portfolio_cards .card.opened a{
+    pointer-events: none;
+}
+
+.portfolio .portfolio_cards .block-content {
+    display: none;
+    padding: 16px;
+}
+
+.portfolio .portfolio_cards .block-content p {
+    font-size: 16px;
+    margin-top: 16px;
+}
+
+.portfolio .portfolio_cards .block-content .close-block-button,
+#addBlockForm .close-form-button {
+    display: block;
+    margin-top: 16px;
+    cursor: pointer;
+    background: #FFE3BF;
+}
+
+.portfolio .portfolio_cards .block-content .close-block-button img,
+#addBlockForm .close-form-button img{
+    border-radius: 50%;
+    background: #FFE3BF;
+    border: 1px solid #F25252;
+    transition: all 0.5s ease-out;
+}
+
+.portfolio .portfolio_cards .block-content .close-block-button img:hover,
+#addBlockForm .close-form-button img:hover{
+    background: #F2F7FC;
 }
 
 .portfolio .portfolio_cards p {
@@ -755,10 +795,16 @@ textarea {
     font-weight: 400;
     line-height: 16px;
     color: #1A1003;
+    transition: all 0.6s ease-out;
+}
+
+.portfolio .portfolio_cards a:hover {
+    font-size: 20px;
+    color: #2f2f30;
 }
 
 .portfolio .portfolio_cards img {
-    width: 100%
+    width: 100%;
 }
 
 #addBlockForm {
@@ -773,23 +819,27 @@ textarea {
 #addBlockButton {
     margin: 0 12px;
     margin-bottom: 32px;
-    width: calc((100% - 48px) / 2);
+    width: calc((100% - 56px) / 2);
+    height: 150px;
     border-radius: 8px;
     background: #FFE3BF;
-    padding: 48px 8px;
+    border: 2px solid #FFE3BF;
+    padding: auto 8px;
     cursor: pointer;
     text-align: center;
+    transition: all 1s ease-out;
 }
 
-#blockTitle, #blockText,
-#blockImage, #blockCategory {
-    margin: 16px;
-    width: 100%;
-    border-radius: 8px;
+#addBlockButton:hover {
+    border: 2px solid #F25252;
+    font-size: 42px;
+    color: #F25252;
 }
 
 #submitBlockButton {
-    padding: 10px 20px;
+    padding: 20px 40px;
+    width: fit-content;
+    margin: 16px auto;
     border-radius: var(--border-radius);
     background: var(--color-buttons);
     transform: scale(1);
@@ -800,62 +850,84 @@ textarea {
     color: #F2F7FC;
 }
 
+#submitBlockButton:hover {
+    transform: scale(1.02);
+}
+
+#blockTitle,
+#blockText,
+#blockImage,
+#blockCategory {
+    margin: 16px auto;
+    width: 100%;
+    border-radius: 8px;
+    border: 1px solid #E80505;
+    background: #ffffff !important;
+    outline: none;
+    height: 24px;
+    width: calc(100% - 40px);
+    color: #1A1003;
+    font-family: Poppins;
+    font-size: 16px;
+}
+
+#blockText {
+    font-family: Poppins;
+    font-size: 12px;
+    color: #1A1003;
+    height: 36px;
+}
 
 .input__wrapper {
     width: 100%;
     position: relative;
     margin: 15px 0;
     text-align: center;
-  }
-   
-  .input__file {
+}
+
+.input__file {
     opacity: 0;
     visibility: hidden;
     position: absolute;
-  }
-   
-  .input__file-icon-wrapper {
+}
+
+.input__file-button:hover {
+    border: 2px solid #E80505;
+}
+
+.input__file-icon-wrapper {
     height: 60px;
     width: 60px;
     margin-right: 15px;
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    align-items: center;
+    justify-content: center;
     border-radius: 8px;
-  }
-   
-  .input__file-button-text {
+}
+
+.input__file-button-text {
     line-height: 1;
     margin-top: 1px;
-  }
-   
-  .input__file-button {
+}
+
+.input__file-button {
     width: 100%;
     max-width: 290px;
     height: 60px;
     background: #F2F7FC;
+    border: 2px solid #F2F7FC;
     color: #F25252;
     font-size: 1.125rem;
     font-weight: 700;
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-box-pack: start;
-        -ms-flex-pack: start;
-            justify-content: flex-start;
+    align-items: center;
+    justify-content: flex-start;
     border-radius: 3px;
     cursor: pointer;
     margin: 0 auto;
-  }
+    transition: all 0.3s ease-out;
+}
+
 
 
    /* BLOG */
