@@ -719,10 +719,11 @@ textarea {
 .portfolio .work_tags li a {
     color: #57657A;
     margin: 0 8px;
+    transition: all 0.3s ease-in-out;
 }
 
 .portfolio .work_tags li a:hover,
-.portfolio .work_tags .active a {
+.portfolio .work_tags a.active {
     color: #F25252;
 }
 
@@ -738,7 +739,7 @@ textarea {
     border-radius: 8px;
     background: #FFE3BF;
     padding: 8px;
-    transition: all 0.5s ease;
+    transition: all 0.5s ease-in-out;
 }
 
 .portfolio .portfolio_cards .card.opened {
@@ -805,6 +806,12 @@ textarea {
 
 .portfolio .portfolio_cards img {
     width: 100%;
+    max-height: 120px;
+}
+
+.portfolio .portfolio_cards .card.opened img {
+    width: 100%;
+    max-height: fit-content;
 }
 
 #addBlockForm {
@@ -814,6 +821,7 @@ textarea {
     padding: 32px;
     display: flex;
     flex-direction: column;
+    border-radius: 8px;
 }
 
 #addBlockButton {
@@ -927,6 +935,71 @@ textarea {
     margin: 0 auto;
     transition: all 0.3s ease-out;
 }
+
+.slide-in {
+    animation: slideIn 0.5s ease forwards;
+    display: none;
+}
+
+@keyframes slideIn {
+    0% {
+        transform: translateY(50px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.slide-out {
+    animation: slideOut 0.5s ease forwards;
+}
+
+@keyframes slideOut {
+    0% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(50px);
+        opacity: 0;
+        display: none;
+    }
+}
+
+.slide-in-button {
+    animation: slideInButton 0.5s ease forwards;
+    display: none;
+}
+
+@keyframes slideInButton {
+    0% {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.slide-out-button {
+    animation: slideOutButton 0.5s ease forwards;
+}
+
+@keyframes slideOutButton {
+    0% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(20px);
+        opacity: 0;
+        display: none;
+    }
+}
+
 
 
 
