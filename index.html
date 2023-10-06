@@ -24,7 +24,7 @@
                     <nav class="navigation">
                         <ul class="navigation__list">
                             <li class="navigation__item">
-                                <a href="" class="navigation__link active" id="homeBtn">
+                                <a href="" class="navigation__link active" id="about-meBtn">
                                     <svg class="navigation-icon__wrapper" width="24" height="24">
                                         <use class="navigation__icon" href="./img/symbol-defs.svg#icon-home"></use>
                                       </svg>
@@ -40,7 +40,7 @@
                                 </a>
                             </li>
                             <li class="navigation__item">
-                                <a href="" class="navigation__link" id="workBtn">
+                                <a href="" class="navigation__link" id="portfolioBtn">
                                     <svg class="navigation-icon__wrapper" width="24" height="24">
                                         <use class="navigation__icon" href="./img/symbol-defs.svg#icon-work"></use>
                                       </svg>
@@ -77,28 +77,28 @@
 
                         <ul class="social__list">
                             <li class="social__item">
-                                <a href="#" class="social__link">
+                                <a href="https://facebook.com/" class="social__link">
                                     <svg class="social-icon__wrapper" width="11" height="20">
                                         <use class="social__icon" href="./img/symbol-defs.svg#icon-facebook"></use>
                                     </svg>
                                 </a>
                             </li>
                             <li class="social__item">
-                                <a href="#" class="social__link">
+                                <a href="https://www.linkedin.com/" class="social__link">
                                     <svg class="social-icon__wrapper" width="16" height="15">
                                         <use class="social__icon" href="./img/symbol-defs.svg#icon-instagram"></use>
                                     </svg>
                                 </a>
                             </li>
                             <li class="social__item">
-                                <a href="#" class="social__link">
+                                <a href="https://twitter.com/" class="social__link">
                                     <svg class="social-icon__wrapper" width="17" height="14">
                                         <use class="social__icon" href="./img/symbol-defs.svg#icon-twitter"></use>
                                       </svg>
                                 </a>
                             </li>
                             <li class="social__item">
-                                <a href="#" class="social__link">
+                                <a href="https://github.com/" class="social__link">
                                     <svg class="social-icon__wrapper" width="17" height="17">
                                         <use class="social__icon" href="./img/symbol-defs.svg#icon-github"></use>
                                     </svg>
@@ -149,7 +149,7 @@
                                 </li>
                             </ul>
 
-                            <button class="contacts__button">
+                            <button class="contacts__button" id="downloadButton">
                                 <svg class="contacts-button-icon__wrapper" width="24" height="24">
                                     <use class="contacts-button__icon" href="./img/symbol-defs.svg#icon-download"></use>
                                 </svg>
@@ -446,30 +446,103 @@
                         </div>
                     </section>
 
-                    <section class="blog no-active">
-                        <h2 class="blog__title title-h2"><span class="title-h2__text">Blog</span><span class="title-h2__line"></span>
+                    <section class="blog no-active" id="blog">
+                        <h2 class="blog__title title-h2"><span class="title-h2__text">Blog</span><span
+                                class="title-h2__line"></span>
                         </h2>
-                    
-                        <div class="blog_card card-one">
+
+                        <div class="blog_card">
                             <div>
-                                <h3></h3>
-                                <p> </p>
+                                <h3>Робота з JSON: серіалізація та десеріалізація даних, взаємодія з веб-сервером</h3>
+                                <p>JSON – це текстовий формат даних, що використовується для передачі структурованих
+                                    даних через веб. Він
+                                    був
+                                    введений як
+                                    частина мови JavaScript, але на сьогоднішній день підтримується та активно
+                                    використовується в більшості
+                                    мов
+                                    програмування. </p>
                             </div>
-                            <a href="">Читати далі</a>
+                            <a href="./articles/article1.html">Читати далі</a>
                         </div>
-                        <div class="blog_card card-two">
+                        <div class="blog_card">
                             <div>
-                                <h3></h3>
-                                <p></p>
-                                <a href="">Читати далі</a>
+                                <h3>Що має знати Junior Front End розробник у 2023 році</h3>
+                                <p>Перед тим, як глибше зануритися у вимоги та навички, які очікується від Junior Front
+                                    End розробників у
+                                    2023
+                                    році,
+                                    згадаймо, що в основі цього все ще залишається страсть до веб-технологій і постійне
+                                    самовдосконалення.
+                                </p>
+                                <a href="./articles/article2.html">Читати далі</a>
                             </div>
                         </div>
-                        <div class="blog_card card-three">
+                        <div class="blog_card">
                             <div>
-                                <h3></h3>
-                                <p></p>
-                                <a href="">Читати далі</a>
+                                <h3>Оптимізація роботи з DOM: Підвищуємо продуктивність вашого JavaScript</h3>
+                                <p>Кожен веб-розробник знає, що Document Object Model (DOM) є важливою частиною
+                                    взаємодії JavaScript з HTML.
+                                    Проте, без
+                                    правильної оптимізації, взаємодія з DOM може стати плямою на продуктивності вашого
+                                    коду.</p>
+                                <a href="./articles/article3.html">Читати далі</a>
                             </div>
+                        </div>
+                        <div class="blog_card">
+                            <div>
+                                <h3>Працюємо з терміналом в розробці. Основні команди терміналу для програміста</h3>
+                                <p>Термінал — це інструмент, який дає нам можливість взаємодіяти з нашою системою через
+                                    командний рядок. За допомогою
+                                    терміналу ми можемо виконувати всілякі задачі в розробці: від простих, таких як
+                                    перегляд вмісту папки, до складних,
+                                    наприклад, керування веб-сервером.</p>
+                                <a href="./articles/article4.html">Читати далі</a>
+                            </div>
+                        </div>
+                        <div class="blog_card">
+                            <div>
+                                <h3>Що має знати Junior Front End розробник у 2023 році</h3>
+                                <p>Перед тим, як глибше зануритися у вимоги та навички, які очікується від Junior Front
+                                    End розробників у
+                                    2023
+                                    році,
+                                    згадаймо, що в основі цього все ще залишається страсть до веб-технологій і постійне
+                                    самовдосконалення.
+                                </p>
+                                <a href="./articles/article2.html">Читати далі</a>
+                            </div>
+                        </div>
+                        <div class="blog_card">
+                            <div>
+                                <h3>Робота з JSON: серіалізація та десеріалізація даних, взаємодія з веб-сервером</h3>
+                                <p>JSON – це текстовий формат даних, що використовується для передачі структурованих
+                                    даних через веб. Він
+                                    був
+                                    введений як
+                                    частина мови JavaScript, але на сьогоднішній день підтримується та активно
+                                    використовується в більшості
+                                    мов
+                                    програмування. </p>
+                            </div>
+                            <a href="./articles/article1.html">Читати далі</a>
+                        </div>
+                        <div class="blog_card">
+                            <div>
+                                <h3>Оптимізація роботи з DOM: Підвищуємо продуктивність вашого JavaScript</h3>
+                                <p>Кожен веб-розробник знає, що Document Object Model (DOM) є важливою частиною
+                                    взаємодії JavaScript з HTML.
+                                    Проте, без
+                                    правильної оптимізації, взаємодія з DOM може стати плямою на продуктивності вашого
+                                    коду.</p>
+                                <a href="./articles/article3.html">Читати далі</a>
+                            </div>
+                        </div>
+
+                        <div class="pagination">
+                            <a href="#" class="page-link">1</a>
+                            <a href="#" class="page-link">2</a>
+                            <a href="#" class="page-link">3</a>
                         </div>
                     </section>
                     
@@ -510,9 +583,7 @@
                                     <span class="contacts__line"></span>
                                     <button type="submit" class="contacts__submit-button">Submit</button>
                                 </div>
-                            </div>
-                            
-                            
+                            </div>    
                     </section>
                 </div>
             </main>
@@ -520,6 +591,7 @@
     </div>
 <script src="jquery.min.js"></script>
 <script src="portfolio.js"></script>
-<script src="script.js"></script>
+<script type="module" src="script.js"></script>
+<script type="module" src="./articles/article.js"></script>
 </body>
 </html>
