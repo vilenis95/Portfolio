@@ -1118,6 +1118,13 @@ textarea {
   border-radius: 20px;
 }
 
+.email__block {
+  background-color: rgba(242, 247, 252, 1);
+  width: 100%; 
+  max-width: 333px; 
+  border-radius: 20px;
+}
+
 .phone__block__info,
 .email__block__info {
   display: flex;
