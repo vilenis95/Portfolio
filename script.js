@@ -1,19 +1,72 @@
-// 
 document.addEventListener("DOMContentLoaded", function () {
-    // Кнопки навігації
-    let homeButton = document.getElementById("homeBtn");
-    let resumeButton = document.getElementById("resumeBtn");
-    let workButton = document.getElementById("workBtn");
-    let blogButton = document.getElementById("blogBtn");
-    let contactButton = document.getElementById("contactBtn");
+    let blogCards = document.querySelectorAll('.blog_card');
+    let cardsPerPage = 3;
+    let currentPage = 1;
 
-    // Блоки сторінки
-    let aboutMeSection = document.querySelector(".about-me.right");
-    let resumeSection = document.querySelector(".resume");
-    let workSection = document.querySelector(".portfolio");
-    let blogSection = document.querySelector(".blog");
-    let contactSection = document.querySelector(".contact");
+    // Функція для відображення секцій на поточній сторінці
+    function showPage(pageNumber) {
+        let startIndex = (pageNumber - 1) * cardsPerPage;
+        let endIndex = startIndex + cardsPerPage;
 
+        blogCards.forEach((card, index) => {
+            if (index >= startIndex && index < endIndex) {
+                card.style.display = 'block';
+            } else {
+                card.style.display = 'none';
+            }
+        });
+        currentPage = pageNumber;
+    }
+
+    // За замовчуванням відображаємо першу сторінку
+    showPage(currentPage);
+
+    // Обробники для кнопок пагінації
+    let paginationLinks = document.querySelectorAll('.page-link');
+
+    paginationLinks.forEach((link, index) => {
+        link.addEventListener('click', function (event) {
+            event.preventDefault();
+            showPage(index + 1);
+        });
+    });
+
+    // Download Resume
+    let downloadButton = document.getElementById('downloadButton');
+    // Визначаємо URL для скачування файлу
+    let resumeFileURL = './Resume.pdf';
+
+    downloadButton.addEventListener('click', () => {
+        // Створюємо посилання для завантаження файлу
+        let link = document.createElement('a');
+        link.href = resumeFileURL;
+        link.download = 'your_resume.pdf'; // Назва файлу для збереження
+
+        // Додаємо посилання на сторінку й емулюємо клік по ній
+        document.body.appendChild(link);
+        link.click();
+
+        // Видаляємо посилання
+        document.body.removeChild(link);
+    });
+});
+
+// Кнопки навігації
+let homeButton = document.getElementById("about-meBtn");
+let resumeButton = document.getElementById("resumeBtn");
+let workButton = document.getElementById("portfolioBtn");
+let blogButton = document.getElementById("blogBtn");
+let contactButton = document.getElementById("contactBtn");
+
+// Блоки сторінки
+let aboutMeSection = document.querySelector(".about-me");
+let resumeSection = document.querySelector(".resume");
+let workSection = document.querySelector(".portfolio");
+let blogSection = document.querySelector(".blog");
+let contactSection = document.querySelector(".contact");
+
+
+document.addEventListener("DOMContentLoaded", function () {
     // Функція для "скриття" блоків
     function hideAllSections() {
         aboutMeSection.style.display = "none";
@@ -32,48 +85,59 @@ document.addEventListener("DOMContentLoaded", function () {
         contactButton.classList.remove("active");
     }
 
-    // обробник подій для кнопок навігації
+    // Функція для зміни активної сторінки і збереження в `localStorage`
+    function setActiveSection(sectionClass) {
+        hideAllSections();
+        let section = document.querySelector(sectionClass);
+        if (section) {
+            section.style.display = "block";
+            let buttonId = sectionClass + "Btn";
+            let result = buttonId.replace(/\./, "#");
+            let button = document.querySelector(result);
+            removeActiveClassFromButtons();
+            if (button) {
+                button.classList.add("active");
+            }
+            // Збереження активної сторінки в `localStorage`
+            localStorage.setItem("activeSection", sectionClass);
+        }
+    }
+
+    // Обробник подій для кнопок навігації
     homeButton.addEventListener("click", function (event) {
         event.preventDefault();
-        hideAllSections();
-        aboutMeSection.style.display = "block";
-        removeActiveClassFromButtons();
-        homeButton.classList.add("active");
+        setActiveSection(".about-me");
     });
 
     resumeButton.addEventListener("click", function (event) {
         event.preventDefault();
-        hideAllSections();
-        resumeSection.style.display = "block";
-        removeActiveClassFromButtons();
-        resumeButton.classList.add("active");
+        setActiveSection(".resume");
     });
 
     workButton.addEventListener("click", function (event) {
         event.preventDefault();
-        hideAllSections();
-        workSection.style.display = "block";
-        removeActiveClassFromButtons();
-        workButton.classList.add("active");
+        setActiveSection(".portfolio");
     });
 
     blogButton.addEventListener("click", function (event) {
         event.preventDefault();
-        hideAllSections();
-        blogSection.style.display = "block";
-        removeActiveClassFromButtons();
-        blogButton.classList.add("active");
+        setActiveSection(".blog");
     });
 
     contactButton.addEventListener("click", function (event) {
         event.preventDefault();
-        hideAllSections();
-        contactSection.style.display = "block";
-        removeActiveClassFromButtons();
-        contactButton.classList.add("active");
+        setActiveSection(".contact");
     });
 
-    // За замовчуванням старт першої сторінки
-    aboutMeSection.style.display = "block";
-    homeButton.classList.add("active");
+
+    // Зчитування з `localStorage` та відображення
+    let activeSection = localStorage.getItem("activeSection");
+    if (activeSection) {
+        setActiveSection(activeSection);
+
+    } else {
+        // За замовчуванням старт першої сторінки
+        setActiveSection(".about-me");
+    }
 });
+
