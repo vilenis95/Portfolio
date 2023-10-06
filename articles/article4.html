@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Працюємо з терміналом в розробці</title>
+         <link rel="stylesheet" href="../css/articles.css">
+         <link rel="apple-touch-icon" sizes="180x180" href="../img/favicon/android-chrome-192x192.png">
+         <link rel="icon" type="image/png" sizes="32x32" href="../img/favicon/favicon-32x32.png">
+         <link rel="icon" type="image/png" sizes="16x16" href="../img/favicon/favicon-16x16.png">
+</head>
+
+<body>
+   <div class="wrapper article">
+      <div>
+         <button class="back" id="backButton">
+            <svg width="24" height="24" class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true"
+               xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 8 14">
+               <path width="28" height="29" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                  stroke-width="2" d="M7 1 1.3 6.326a.91.91 0 0 0 0 1.348L7 13" />
+            </svg>
+            Back to blog</button>
+      </div>
+      <div class="conteiner">
+         <main class="main_content">
+            <div class="blog_posts_wrapper">
+               <div class="blog_post_container">
+                  <div class="blog_post">
+                     <div class="blog_post_title">
+                        <h1 class="title-h2__text  post_title">Працюємо з терміналом в розробці. Основні команди
+                           терміналу для програміста</h1>
+                     </div>
+                     <div class="blog_post subtitle">
+                        <p><strong>Published:</strong> June 25, 2020</p>
+                     </div>
+                     <div class="blog_post_text">
+                        <div class="blog_post_text card">
+                           <p>Термінал — це інструмент, який дає нам можливість взаємодіяти з нашою системою через
+                              командний рядок. За допомогою
+                              терміналу ми можемо виконувати всілякі задачі в розробці: від простих, таких як перегляд
+                              вмісту папки, до складних,
+                              наприклад, керування веб-сервером. В цій статті ми розглянемо основи роботи з терміналом і
+                              дізнаємось про деякі ключові
+                              команди, які повинен знати кожен програміст.</p>
+                        </div>
+
+                        <div class="blog_post_text card">
+                           <h2 class="title-h2 title-h2__text">Початок роботи з терміналом</h2>
+                           <p>Відкриття терміналу залежить від вашої операційної системи. У Windows, термінал можна
+                              відкрити, натиснувши <span class="pln">Win+R</span> і
+                              ввівши <span class="pln">cmd</span>. На MacOS і Linux, ви зазвичай можете знайти термінал
+                              у меню застосунків, шукаючи “Terminal” або “Konsole”.</p>
+
+                           <p>Коли ви відкриєте термінал, ви побачите командний рядок, де ви можете вводити команди.</p>
+                        </div>
+
+                        <div class="blog_post_text card">
+                           <h3 class="title-h3">Основні команди терміналу для переміщення по файлам</h3>
+
+                           <p>Перш за все, вам потрібно навчитися переміщатися по файловій системі вашого комп’ютера.
+                              Ось три основні команди:</p>
+                           <ul>
+                              <li><span class="pln">cd</span> (change directory) — ця команда дозволяє вам переміщатися
+                                 між папками. Наприклад, <span class="pln">cd Documents</span> перенесе вас до папки
+                                 Documents.</li>
+                              <li><span class="pln">ls</span>(list) — використовуйте цю команду, щоб побачити вміст
+                                 поточної папки.</li>
+                              <li><span class="pln">pwd</span>(print working directory) — ця команда показує поточну
+                                 папку, в якій ви перебуваєте.</li>
+                           </ul>
+                        </div>
+
+                        <div class="blog_post_text card">
+                           <h3 class="title-h3">Робота з файлами і папками</h3>
+
+                           <p>Ось декілька команд, які допоможуть вам працювати з файлами і папками:</p>
+                           <ul>
+                              <li><span class="pln">touch</span> — створює новий файл. Наприклад,<span class="pln">touch
+                                    example.txt</span> створить новий файл <span class="pln">example.txt.</span> </li>
+                              <li><span class="pln">mkdir</span>створює нову папку. Наприклад, <span class="pln">mkdir
+                                    NewFolder</span> створить нову папку <span class="pln">NewFolder</span>.</li>
+                              <li><span class="pln">cp</span> — копіює файл. Ви повинні вказати вихідний і цільовий
+                                 файл. Наприклад, <span class="pln">cp source.txt destination.txt </span> скопіює
+                                 <span class="pln"> source.txt </span> в <span class="pln">destination.txt.</span>
+                              </li>
+                              <li><span class="pln">mv</span> — переміщує або перейменовує файл. </li>
+                              <li><span class="pln">rm</span> — видаляє файл. Будьте обережні з цією командою!</li>
+                           </ul>
+                        </div>
+
+
+                        <div class="blog_post_text card">
+                           <h3 class="title-h3">Використання текстових редакторів</h3>
+                           <p>Текстові редактори є важливою складовою інструментарію програміста, особливо при роботі в
+                              терміналі. Їх використовують
+                              для створення та редагування коду, конфігураційних файлів, документів тощо. Ось декілька
+                              найпопулярніших текстових
+                              редакторів, які використовуються в терміналі.</p>
+
+                           <h3 class="title-h3">Vim</h3>
+                           <p>Vim є потужним та гнучким текстовим редактором для розробників, який є стандартним у
+                              більшості Unix-подібних систем. Він
+                              має складний інтерфейс, але дозволяє вам швидко та ефективно редагувати текст. Ви можете
+                              відкрити файл у Vim командою <span class="pln">
+                                 vim filename.</span> Vim має різні режими, включаючи режим команд, режим вставки та
+                              візуальний
+                              режим. Ось декілька основних
+                              команд:</p>
+                           <pre>
+<code>
+   i # Перейти в режим вставки
+   :w # Зберегти файл
+   :q # Вийти з Vim
+   :wq # Зберегти файл та вийти
+   :q! # Вийти без збереження
+
+</code>
+                           </pre>
+                           <h3 class="title-h3">Nano</h3>
+                           <p>Nano є простішим текстовим редактором, який також широко використовується в Unix-подібних
+                              системах. Він має більш
+                              простий інтерфейс, що показує основні команди внизу екрана. Ви можете відкрити файл в Nano
+                              командою <span class="pln">nano filename</span>. Ось
+                              декілька основних команд:</p>
+                           <pre>
+<code>
+   Ctrl+O # Зберегти файл
+   Ctrl+X # Вийти з Nano
+
+</code>
+</pre>
+
+                           <h3 class="title-h3">Nano</h3>
+                           <p>Emacs є ще одним потужним текстовим редактором, який має багато можливостей та гнучке
+                              середовище для налаштування. Він
+                              має більш крутий криву навчання, але дозволяє вам виконувати багато операцій без виходу з
+                              редактора. Ви можете відкрити
+                              файл в Emacs командою <span class="pln"> emacs filename</span>. Ось декілька основних
+                              команд:</p>
+                           <pre>
+<code>
+   Ctrl+x Ctrl+s # Зберегти файл
+   Ctrl+x Ctrl+c # Вийти з Emacs
+   
+</code>
+</pre>
+
+                        </div>
+
+                        <div class="blog_post_text card">
+                           <h2 class="title-h2 title-h2__text">Заключення</h2>
+                           <p>Термінал — це могутній інструмент, який може значно підвищити вашу продуктивність. Ці
+                              основи дадуть вам добрий початок,
+                              але є ще багато іншого, що ви можете робити в терміналі. Не бійтеся експериментувати і
+                              досліджувати!</p>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </main>
+      </div>
+   </div>
+   <script type="module" src="./article.js"></script>
+   <script type="module" src="../script.js"></script>
+</body>
+
+</html>

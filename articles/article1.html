@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Робота з JSON</title>
+  <link rel="stylesheet" href="../css/articles.css">
+  <link rel="apple-touch-icon" sizes="180x180" href="../img/favicon/android-chrome-192x192.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="../img/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="../img/favicon/favicon-16x16.png">
+</head>
+
+<body>
+  <div class="wrapper article">
+    <div>
+      <button class="back" id="backButton">
+        <svg width="24" height="24" class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true"
+          xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 8 14">
+          <path width="28" height="29" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+            stroke-width="2" d="M7 1 1.3 6.326a.91.91 0 0 0 0 1.348L7 13" />
+        </svg>
+        Back to blog</button>
+    </div>
+    <div class="conteiner">
+      <main class="main_content">
+        <div class="blog_posts_wrapper">
+          <div class="blog_post_container">
+            <div class="blog_post">
+              <div class="blog_post_title">
+                <h1 class="title-h2__text  post_title">Робота з JSON: серіалізація та десеріалізація даних,
+                  взаємодія з веб-сервером</h1>
+              </div>
+              <div class="blog_post subtitle">
+                <p><strong>Published:</strong> June 25, 2020</p>
+              </div>
+              <div class="blog_post_text">
+                <div class="blog_post_text card">
+                  <p>Нині ми живемо в епоху інформації, де величезні об’єми даних передаються туди-сюди між
+                    різними системами, сервісами і додатками. Щоб спростити цей процес, було створено формати
+                    даних,
+                    які сприяють легкому обміну та зберіганню інформації. Один з найпопулярніших таких
+                    форматів – JSON, або
+                    JavaScript Object Notation.</p>
+
+                  <p>JSON – це текстовий формат даних, що використовується для передачі структурованих даних
+                    через
+                    веб. Він
+                    був введений як частина мови JavaScript, але на сьогоднішній день підтримується та активно
+                    використовується в більшості мов програмування. Велика кількість веб-API використовує JSON
+                    як
+                    формат
+                    обміну даними.</p>
+
+                  <p>Ця стаття спрямована на детальне вивчення JSON, включаючи його основні концепції, методи
+                    серіалізації
+                    та десеріалізації даних, а також його роль у взаємодії з веб-сервером. Ми розглянемо
+                    практичні
+                    приклади використання JSON в різних мовах програмування, зокрема в JavaScript та Python, а
+                    також
+                    подивимося на створення простого веб-застосунку, який використовує JSON для обміну даними.
+                  </p>
+                </div>
+
+                <div class="blog_post_text card">
+                  <h2 class="title-h2 title-h2__text">Основи JSON</h2>
+                  <p>JSON, або JavaScript Object Notation, — це формат даних, що базується на тексті й широко
+                    використовується для передачі даних у мережі. Він був розроблений з метою забезпечення
+                    універсального
+                    методу для обміну даними між клієнтською та серверною частиною веб-додатка, але на
+                    сьогодні
+                    використовується в різноманітних сферах, від баз даних до конфігураційних файлів.</p>
+
+                  <p>Основна структура JSON заснована на двох типах структур даних: об’єктах і масивах.</p>
+
+                  <p><strong>Об’єкти</strong> в JSON представлені у вигляді пар ключ-значення, де ключ — це
+                    рядок,а значення може бути рядком, числом, булевим значенням, об’єктом, масивом або null.
+                    Об’єкти в JSON розташовуються в фігурних дужках { }.</p>
+
+                  <p><strong>Масиви</strong> в JSON — це упорядковані набори значень. Масиви в JSON обмежуються
+                    квадратними дужками [] і можуть містити значення будь-якого типу.</p>
+                  <p>Ось приклад JSON-об’єкта:</p>
+
+                  <pre>
+<code class="prettyprinted">
+{
+  "name": "John Doe",
+  "age": 30,
+  "isEmployed": true,
+  "hobbies": ["reading", "gaming", "coding"],
+  "address": {
+    "street": "123 Main St",
+    "city": "Anytown",
+    "state": "Anystate",
+    "postalCode": "12345"
+  }
+}
+</code>
+                          </pre>
+
+                  <p>Цей JSON-об’єкт представляє людину з ім’ям John Doe, якій 30 років, вона працює
+                    (<span class="pln">isEmployed</span>), має три захоплення (<span class="pln"> reading,
+                      gaming, coding</span>) та проживає за конкретною адресою.</p>
+
+                  <p>Використання JSON дозволяє нам працювати з цими даними в структурованому і зрозумілому
+                    форматі.</p>
+
+                  <p class="title-h6">Приклад 1: JSON об’єкт з товаром</p>
+
+                  <pre>
+<code class="prettyprinted">
+{
+  "productId": "1234",
+  "productName": "Football",
+  "productCategory": "Sports",
+  "price": 15.50
+}
+</code>
+                           </pre>
+
+                  <p>У цьому прикладі ми маємо товар з унікальним ідентифікатором (<span class="pln">
+                      productId</span>), назвою (<span class="pln">productName</span>),
+                    категорією (<span class="pln">productCategory</span>) та ціною (<span class="pln">price</span>).</p>
+
+                  <p class="title-h6">Приклад 2: JSON об’єкт з масивом</p>
+
+                  <pre>
+<code>
+{
+  "students": [
+    {
+      "id": "1",
+      "name": "John Doe",
+      "age": 22,
+      "major": "Computer Science"
+    },
+    {
+      "id": "2",
+      "name": "Jane Smith",
+      "age": 23,
+      "major": "Mathematics"
+    }
+  ]
+}
+</code>
+                           </pre>
+
+                  <p>У цьому прикладі ми маємо масив студентів, кожен з яких представлений у вигляді окремого
+                    JSON-об’єкта з інформацією про ідентифікатор (<span class="pln">id</span>), ім’я (<span
+                      class="pln">name</span></code>), вік (<span class="pln">age</span>) та основний предмет
+                    навчання (<span class="pln">major</span></s>).</p>
+
+                  <p class="title-h6">Приклад 3: JSON об’єкт з вкладеними об’єктами</p>
+
+                  <pre>
+<code class=" prettyprinted">
+{
+  "company": "Tech Co.",
+  "address": {
+    "street": "123 Main St",
+    "city": "Anytown",
+    "state": "Anystate",
+    "postalCode": "12345",
+    "coordinates": {
+      "latitude": 35.6895,
+      "longitude": 139.6917
+    }
+  }
+}
+</code>
+									</pre>
+
+                  <p>У цьому прикладі ми маємо об’єкт компанії, який включає в себе інформацію про адресу
+                    компанії, яка
+                    сама є JSON-об’єктом. Адреса також включає координати, які представлені окремим
+                    JSON-об’єктом.</p>
+                </div>
+
+                <div class="blog_post_text card">
+                  <h2 class="title-h2 title-h2__text">Робота з JSON в JavaScript</h2>
+
+                  <p>JavaScript має вбудований об’єкт <strong>JSON</strong>, який надає методи для роботи з даними у
+                    форматі
+                    JSON. Два ключові методи цього об’єкта, які використовуються для серіалізації та десеріалізації JSON
+                    це <span class="pln">JSON.stringify()</span> та <span class="pln">JSON.parse()</span>.
+                  </p>
+
+                  <h3 class="title-h3">JSON.stringify()</h3>
+
+                  <p><span class="pln">JSON.stringify()</span>використовується для перетворення JavaScript об’єкта в
+                    рядок JSON. Це процес, відомий як
+                    “серіалізація” об’єкта.</p>
+
+                  <p>Ось як це працює на прикладі:</p>
+
+                  <pre>
+<code class="prettyprinted">
+let student = {
+  name: "John",
+  age: 30,
+  city: "New York"
+};
+
+let json = JSON.stringify(student);
+
+  console.log(json);
+// виведе: {"name":"John","age":30,"city":"New York"}
+</code>
+</pre>
+
+                  <p>У цьому прикладі об’єкт <span class="pln">student</span>
+                    перетворюється в рядок JSON за допомогою <span class="pln">JSON.stringify()</span>,
+                    і результат виводиться у консоль.</p>
+
+                  <h3 class="title-h3"><strong>JSON.parse()</strong></h3>
+
+                  <p><span class="pln">JSON.parse()</span> використовується для перетворення рядка JSON назад в
+                    JavaScript об’єкт. Цей процес
+                    називається “десеріалізація”.</p>
+
+                  <p>Ось як це працює:</p>
+                  <pre>
+<code>
+let json = '{"name":"John","age":30,"city":"New York"}';
+
+let student = JSON.parse(json);
+
+console.log(student);
+// виведе: { name: 'John', age: 30, city: 'New York' }
+
+</code>
+                  </pre>
+
+                  <p>У цьому прикладі рядок JSON <span class="pln">json</span>
+                    перетворюється назад в JavaScript об’єкт за допомогою <span class="pln">JSON.parse()</span>,
+                    і результат виводиться у консоль.</p>
+                </div>
+
+
+                <div class="blog_post_text card">
+                  <h2 class="title-h2 title-h2__text">Робота з JSON в Python</h2>
+
+                  <p>Python має вбудований модуль <span class="pln">json</span>, який надає методи для роботи з даними у
+                    форматі JSON. Два ключові методи цього модуля, які використовуються для серіалізації та
+                    десеріалізації JSON, це <span class="pln">json.dumps()</span> та <span
+                      class="pln">json.loads()</span>.
+                  </p>
+
+                  <h3 class="title-h3"><strong>json.dumps()</strong></h3>
+
+                  <p><span class="pln">json.dumps()</span> використовується для перетворення Python об’єкта в рядок
+                    JSON. Це процес, відомий як
+                    “серіалізація” об’єкта.</p>
+                  <p>Ось як це працює на прикладі:</p>
+                  <pre>
+<code>
+import json
+  student = {
+    "name": "John",
+    "age": 30,
+    "city": "New York"
+  }
+json_str = json.dumps(student)
+
+print(json_str)
+# виведе: {"name": "John", "age": 30, "city": "New York"}
+</code>
+</pre>
+
+                  <p>У цьому прикладі словник <span class="pln">student</span> перетворюється в рядок JSON за допомогою
+                    <span class="pln">json.dumps()</span>,
+                    і результат виводиться.
+                  </p>
+                  <h3 class="title-h3"><strong>json.loads()</strong></h3>
+                  <p><span class="pln">json.loads()</span> використовується для перетворення рядка JSON назад в Python
+                    об’єкт. Цей процес називається
+                    “десеріалізація”.</p>
+                  <p>Ось як це працює:</p>
+                  <pre>
+<code>
+import json
+
+json_str = '{"name": "John", "age": 30, "city": "New York"}'
+
+student = json.loads(json_str)
+
+print(student)
+# виведе: {'name': 'John', 'age': 30, 'city': 'New York'}
+</code>
+                  </pre>
+
+                  <p>У цьому прикладі рядок JSON <span class="pln">json_str</span> перетворюється назад в Python словник
+                    за допомогою <span class="pln">json.loads()</span>,і результат виводиться.</p>
+                </div>
+
+                <div class="blog_post_text card">
+                  <h2 class="title-h2 title-h2__text">Практичний приклад: взаємодія з веб-сервером за допомогою
+                    JSON</h2>
+
+                  <p>Використання JSON для обміну даними з веб-сервером – це одна з найпоширеніших ситуацій в
+                    розробці веб-застосунків. Давайте розглянемо простий приклад такого застосунку, який використовує
+                    JavaScript на клієнтській стороні та Python на серверній.</p>
+
+                  <p>На стороні клієнта ви можете використовувати вбудований об’єкт <span class="pln">fetch</span> в
+                    JavaScript для
+                    відправки HTTP-запиту до сервера. Запит може містити дані в форматі JSON, які потім можна обробити
+                    на сервері.</p>
+
+                  <pre>
+<code>
+fetch('https://localhost:5000/data', {
+  method: 'POST',
+  headers: {
+    'Content-Type': 'application/json',
+  },
+  body: JSON.stringify({
+  name: 'John',
+  age: 30
+  }),
+})
+.then(response => response.json())
+.then(data => console.log(data));
+</code>
+                  </pre>
+
+                  <p>У цьому прикладі ми відправляємо POST-запит до сервера на адресу <span
+                      class="pln">https://localhost:5000/data</span>.
+                    У тілі запиту ми передаємо об’єкт JSON, який містить інформацію про користувача. Потім ми
+                    очікуємо відповідь від сервера в форматі JSON, яку обробляємо та виводимо в консоль.</p>
+
+                  <p>На стороні сервера ви можете використовувати Python фреймворк Flask для обробки вхідних
+                    запитів та відправки відповіді. Дані JSON, які прийшли з клієнта, можна десеріалізувати за допомогою
+                    <span class="pln">request.get_json()</span>.
+                  </p>
+
+                  <pre>
+<code>
+from flask import Flask, request, jsonify
+
+app = Flask(__name__)
+
+@app.route('/data', methods=['POST'])
+def handle_data():
+  data = request.get_json()
+  print(data) # виводить {'name': 'John', 'age': 30}
+  return jsonify({'message': 'Data received successfully'}), 200
+
+if __name__ == "__main__":
+  app.run(port=5000)
+</code>
+</pre>
+
+
+
+                  <p>У цьому прикладі ми створюємо Flask сервер, який слухає POST-запити на маршрут <span
+                      class="pln">/data</span>.
+                    Коли сервер отримує запит, він витягує дані JSON з запиту та виводить їх.</p>
+                </div>
+
+                <div class="blog_post_text card">
+                  <h2 class="title-h2 title-h2__text">Підсумок</h2>
+
+                  <p>Ми докладно розглянули, що таке JSON, його основну структуру та призначення. Як ви могли
+                    помітити, JSON – це міцний фундамент для обміну даними в інтернеті. JSON об’єкти є легкими, гнучкими
+                    та легко зрозумілими, що робить їх ідеальним вибором для передачі даних між сервером та клієнтом.
+                  </p>
+
+                  <p>Ми також розглянули, як використовувати JSON в таких популярних мовах програмування, як
+                    JavaScript і
+                    Python. Використання вбудованих функцій та методів для роботи з JSON дозволяє з легкістю
+                    серіалізувати
+                    та десеріалізувати дані, готові для передачі через мережу або зберігання на диску.</p>
+
+                  <p>Ми взяли практичний приклад створення простого веб-застосунку, який використовує JSON для
+                    обміну
+                    даними між клієнтом та сервером. Цей приклад демонструє реальну ситуацію, з якою
+                    веб-розробники
+                    зустрічаються щодня, та показує, як знання JSON допомагає ефективно вирішувати ці задачі.
+                  </p>
+
+                  <p>У сучасному світі веб-розробки неможливо переоцінити значення знання та вміння працювати з
+                    JSON.
+                    Будь-який веб-розробник, незалежно від його спеціалізації та досвіду, зіткнеться з
+                    необхідністю
+                    використовувати JSON на певному етапі своєї роботи. Тому поглиблене розуміння JSON і
+                    вміння
+                    ефективно
+                    з ним працювати є невід’ємною частиною набору навичок сучасного веб-розробника.</p>
+                </div>
+
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </main>
+    </div>
+  </div>
+
+  <script type="module" src="./article.js"></script>
+  <script type="module" src="../script.js"></script>
+  <!-- <script src="../jquery.min.js"></script> -->
+
+</body>
+
+</html>
