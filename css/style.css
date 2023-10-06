@@ -1001,64 +1001,92 @@ textarea {
 }
 
 
+/* BLOG */
+.no-active {
+  display: none;
+}
 
+.blog {
+  width: 100%;
+  padding: 28px 54px 32px 73px;
+  background: var(--color-white);
+  box-shadow: var(--box-shadow);
+  border-radius: var(--border-radius);
+}
 
-   /* BLOG */
-   .no-active {
-    display: none;
+.blog .blog_card:nth-child(-n+3) {
+  display: block;
+}
+
+.blog .blog_card {
+  display: none;
+  width: 100%;
+  margin-bottom: 20px;
+  border-radius: var(--border-radius);
+  padding: 15px;
+  max-height: 150px;
+}
+
+.blog .blog__title.title-h2 {
+  margin-bottom: 42px;
+}
+
+.blog .blog_card:nth-child(3n + 1) {
+  background: #FFE3BF;
+}
+
+.blog .blog_card:nth-child(3n + 2){
+  background: #FFF4E5;
+}
+
+.blog .blog_card:nth-child(3n + 3){
+  background: #FFEED9;
+}
+
+.blog .blog_card p {
+  margin-top: 15px;
+  margin-bottom: 15px;
+  max-width: 600px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+   white-space: nowrap;
+}
+
+.blog .blog_card a {
+  background: var(--color-buttons);
+  border-radius: var(--border-radius);
+  color: white;
+  padding: 8px 10px;
+  transition: .6s all;
+  display: inline-block;
+  transform: scale(1);
+}
+
+.blog .blog_card a:hover {
+  color: var(--color-background);
+  transition: 0.3s all;
+  transform: scale(1.1);
+}
+
+  .pagination {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
   }
 
-  .blog {
-    width: 100%;
-    padding: 28px 54px 32px 73px;
-    background: var(--color-white);
-    box-shadow: var(--box-shadow);
-    border-radius: var(--border-radius);
+  .page-link {
+    margin: 0 5px;
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    cursor: pointer;
   }
 
-  .blog .blog_card {
-    width: 100%;
-    margin-bottom: 20px;
-    border-radius: var(--border-radius);
-    padding: 15px;
+  .page-link:hover {
+    color: var(--color--orange);
   }
 
-  .blog .blog__title.title-h2 {
-    margin-bottom: 42px;
-  }
 
-  .blog .blog_card.card-one {
-    background: #FFE3BF;
-  }
-
-  .blog .blog_card.card-two {
-    background: #FFF4E5;
-  }
-
-  .blog .blog_card.card-three {
-    background: #FFEED9;
-  }
-
-  .blog .blog_card p {
-    margin-top: 15px;
-    margin-bottom: 15px;
-  }
-
-  .blog .blog_card a {
-    background: var(--color-buttons);
-    border-radius: var(--border-radius);
-    color: white;
-    padding: 8px 10px;
-    transition: .6s all;
-    display: inline-block;
-    transform: scale(1);
-  }
-
-  .blog .blog_card a:hover {
-    color: var(--color-background);
-    transition: 0.3s all;
-    transform: scale(1.1);
-  }
 
 
 
