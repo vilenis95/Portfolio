@@ -1,0 +1,119 @@
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:wght@400;500;600&family=Raleway:wght@400;500;600;700&display=swap');
+@import "./css/style.css";
+
+.conteiner{
+   max-width: 1240px;
+   margin: 0 auto;
+}
+
+.blog_posts_wrapper{
+   background-color: var(--color-light-blue);
+   border-radius: var(--border-radius);
+   margin-bottom: 31px;
+   padding: 10px;
+}
+
+.blog_post_title{
+ text-align: center;
+ padding-top: 50px;
+ padding-bottom: 50px;
+}
+
+.blog_post_title .title-h2__text{
+   text-shadow: 2px 2px #30587D;
+}
+
+.blog_post_text.card{
+   margin: 40px;
+}
+.blog_post_text.card p{
+   line-height: 1.5;
+   margin-top: 10px;
+   margin-bottom: 10px;
+   text-indent: 3em;
+   text-align: justify;
+}
+
+.title-h2{
+   margin-bottom: 20px;
+}
+
+pre {
+display: flex;
+   justify-content: center;
+   width: fit-content;
+   padding: 10px;
+   border: 1px solid #ccc;
+   border-radius: 5px;
+   white-space: pre-wrap;
+   font-family: 'Consolas', monospace;
+   font-size: 14px;
+   line-height: 1.5;
+   background: rgb(191, 211, 221);
+}
+
+code {  
+   color: rgb(0, 116, 19);
+}
+
+span.pln{
+   font-family: 'Consolas', monospace;
+   color: rgb(98, 151, 19);
+padding: 2px 4px;
+   font-size: 90%;
+   color: #c7254e;
+   background-color: #f9f2f4;
+   border-radius: 4px;
+}
+
+.title-h3{
+   padding: 25px;
+   font-weight: bold;
+   font-size: 24px;
+}
+
+.title-h6{
+   padding: 20px;
+   font-weight: bold;
+   font-size: 1.3rem;
+}
+
+button.back{
+   width: fit-content;
+   height: fit-content;
+   font-size: larger;
+   background: var(--color-buttons);
+   border-radius: var(--border-radius);
+   color: white;
+   padding: 8px 10px;
+   transition: .6s all;
+   display: inline-block;
+   transform: scale(1);
+   margin-bottom: 10px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+
+button.back:hover {
+   color: var(--color-background);
+   transition: 0.3s all;
+   transform: scale(1.1);
+}
+
+.article{
+   margin-right: 25px;
+}
+.blog_post .subtitle{
+   width: fit-content;
+   margin-left: 4rem;
+}
+
+.blog_post .subtitle p{
+   color: #E80505;
+}
+
+.blog_post_text.card li{
+   list-style-type: disc;
+   margin-left: 70px;
+}
