@@ -1216,6 +1216,27 @@ letter-spacing: 0.030;
   margin-bottom: 19px;
 }
 
+
+.contacts__textInput {
+  display: block;
+  width: 100%; 
+  border: none; 
+  outline: none; 
+  padding: 0; 
+  color:  black; 
+  background-color:  #F1F5F5;
+  font-size: 20px;
+}
+
+
+.contacts__textInput:focus {
+  color: orange; 
+}
+
+
+
+
+
 .contacts__line {
   display: block;
   width: auto;
@@ -1224,6 +1245,10 @@ letter-spacing: 0.030;
   background: #B5B5B5;
   margin-bottom: 23px;
 }
+
+
+
+
 
 .contacts__submit-button {
 display: inline-flex;
