@@ -181,3 +181,36 @@
       margin-top: 18px;
    }
 }
+
+/*======================= 
+    <<  Portfolio  >>  
+========================*/
+
+@media screen and (max-width: 650px) {
+    .portfolio .work_tags {
+        display: none;
+    }
+
+    .portfolio .work_tags_650px {
+        display: block;
+    }
+    .sub-list {
+        display: none;
+    }
+    
+    .portfolio .portfolio_cards {
+        flex-wrap: nowrap;
+        flex-direction: column;
+    }
+
+    .portfolio .portfolio_cards .card {
+        width: calc(100% - 24px);
+    }
+    #addBlockButton {
+        width: calc(100% - 56px);
+    }
+
+    .portfolio .portfolio_cards img {
+        max-height: fit-content;
+        }
+}
