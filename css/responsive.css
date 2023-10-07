@@ -237,7 +237,7 @@
 }
 
 
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 420px) {
    .navigation__list {
       gap: 5px;
    }
