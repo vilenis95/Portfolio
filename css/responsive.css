@@ -258,7 +258,9 @@
       align-items: start;
    }
 
-
+    .blog{
+        padding: 28px 20px 35px 20px;
+    }
 
    .blog_post_title {
       padding-top: 25px;
