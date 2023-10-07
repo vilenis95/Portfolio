@@ -109,6 +109,43 @@
    .resume-top__experience {
       margin-top: 0;
    }
+
+   .blog {
+      padding: 28px 30px 35px 30px;
+   }
+
+   button.back {
+      font-size: medium;
+   }
+
+   button.back svg {
+      width: 18px;
+      height: 18px;
+   }
+
+   .blog_post_title .title-h2__text {
+      font-size: 30px;
+   }
+
+   .blog_post_text.card p {
+      font-size: 14px;
+   }
+
+   .blog_post_text.card .title-h2__text {
+      font-size: 1.7rem;
+   }
+
+   .blog_post_text.card .title-h3 {
+      font-size: 1rem;
+   }
+
+   .blog_post_text.card .title-h6 {
+      font-size: 0.9rem;
+   }
+
+   .blog_post_text.card p {
+      text-indent: 1.5em;
+   }
 }
 
 /*======================= 
@@ -145,10 +182,6 @@
 ========================*/
 
 @media screen and (max-width: 640px) {
-   .section-navigation {
-      padding: 5px;
-   }
-
    .navigation__list {
       gap: 15px;
    }
@@ -180,6 +213,63 @@
    .resume-top__experience {
       margin-top: 18px;
    }
+
+   .blog .blog_card h3 {
+      font-size: 18px;
+   }
+
+   .blog .blog_card p {
+      font-size: 14px;
+   }
+
+   .blog_post_text.card pre {
+      width: 100%;
+      line-height: 1;
+   }
+
+   .blog_post_text.card .title-h6 {
+      padding: 20px 0 20px 0;
+   }
+
+   .blog_post_text.card {
+      margin: 10px;
+   }
+}
+
+
+@media screen and (max-width: 400px) {
+   .navigation__list {
+      gap: 5px;
+   }
+
+   .contacts__title {
+      text-align: center;
+   }
+
+   .contacts__bottom {
+      padding: 35px 10px 33px 10px;
+   }
+
+   .contacts__text {
+      font-size: 14px;
+   }
+
+   .contact__link {
+      align-items: start;
+   }
+
+
+
+   .blog_post_title {
+      padding-top: 25px;
+      padding-bottom: 25px;
+   }
+
+   .blog_post .subtitle {
+      margin-left: 1rem;
+   }
+
+
 }
 
 /*======================= 
@@ -187,30 +277,32 @@
 ========================*/
 
 @media screen and (max-width: 650px) {
-    .portfolio .work_tags {
-        display: none;
-    }
+   .portfolio .work_tags {
+      display: none;
+   }
 
-    .portfolio .work_tags_650px {
-        display: block;
-    }
-    .sub-list {
-        display: none;
-    }
-    
-    .portfolio .portfolio_cards {
-        flex-wrap: nowrap;
-        flex-direction: column;
-    }
+   .portfolio .work_tags_650px {
+      display: block;
+   }
 
-    .portfolio .portfolio_cards .card {
-        width: calc(100% - 24px);
-    }
-    #addBlockButton {
-        width: calc(100% - 24px);
-    }
+   .sub-list {
+      display: none;
+   }
 
-    .portfolio .portfolio_cards img {
-        max-height: fit-content;
-        }
+   .portfolio .portfolio_cards {
+      flex-wrap: nowrap;
+      flex-direction: column;
+   }
+
+   .portfolio .portfolio_cards .card {
+      width: calc(100% - 24px);
+   }
+
+   #addBlockButton {
+      width: calc(100% - 24px);
+   }
+
+   .portfolio .portfolio_cards img {
+      max-height: fit-content;
+   }
 }

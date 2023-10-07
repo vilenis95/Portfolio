@@ -897,7 +897,7 @@ textarea {
   margin-bottom: 20px;
   border-radius: var(--border-radius);
   padding: 15px;
-  max-height: 150px;
+  /* max-height: 150px; */
 }
 
 .blog .blog__title.title-h2 {
@@ -920,9 +920,9 @@ textarea {
   margin-top: 15px;
   margin-bottom: 15px;
   max-width: 600px;
-    overflow: hidden;
+    /* overflow: hidden;
     text-overflow: ellipsis;
-   white-space: nowrap;
+   white-space: nowrap; */
 }
 
 .blog .blog_card a {
@@ -959,9 +959,9 @@ textarea {
     color: var(--color--orange);
   }
 
-
-
-
+.active-page-link {
+  color: var(--color--orange);
+}
 
 
 

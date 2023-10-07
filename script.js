@@ -28,7 +28,16 @@ document.addEventListener("DOMContentLoaded", function () {
         link.addEventListener('click', function (event) {
             event.preventDefault();
             showPage(index + 1);
+
+            // Видалити "active-page-link" у всіх сторінок
+            paginationLinks.forEach((otherLink) => {
+                otherLink.classList.remove('active-page-link');
+            });
+
+            // Додати "active-page-link" до поточної сторінки
+            link.classList.add('active-page-link');
         });
+        paginationLinks[0].classList.add('active-page-link');
     });
 
     // Download Resume
