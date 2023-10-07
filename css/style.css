@@ -573,7 +573,8 @@ textarea {
     margin-left: 36px;
 }
 
-.portfolio .work_tags {
+.portfolio .work_tags,
+.portfolio .work_tags_650px {
     margin: 16px 0;
     font-family: Poppins;
     font-size: 16px;
@@ -582,14 +583,20 @@ textarea {
     justify-content: flex-end;
 }
 
-.portfolio .work_tags li a {
+.portfolio .work_tags_650px {
+  display: none;
+}
+
+.portfolio .work_tags li a,
+.portfolio .work_tags_650px a {
     color: #57657A;
     margin: 0 8px;
     transition: all 0.3s ease-in-out;
 }
 
 .portfolio .work_tags li a:hover,
-.portfolio .work_tags a.active {
+.portfolio .work_tags a.active,
+.portfolio .work_tags_650px a.toggle-list {
     color: #F25252;
 }
 
