@@ -308,3 +308,46 @@
       max-height: fit-content;
    }
 }
+
+/*======================= 
+    <<  Contacts  >>  
+========================*/
+
+@media (max-width: 768px) {
+   .contact {
+     padding: 20px;
+   }
+ 
+   .contact__info {
+     gap: 20px;
+   }
+ 
+   .phone__block,
+   .email__block {
+     max-width: 100%;
+   }
+ 
+   .phone__block__info,
+   .email__block__info {
+     flex-direction: column;
+     align-items: center;
+     text-align: center;
+     margin: 20px 0;
+   }
+ 
+   .phone__textInfo,
+   .email__textInfo {
+     margin: 10px 0;
+     text-align: center;
+   }
+ 
+   .contacts__form-text {
+     padding: 20px;
+   }
+ 
+   .contacts__text-title,
+   .contacts__text-active,
+   .contacts__text {
+     margin-bottom: 10px;
+   }
+ }
