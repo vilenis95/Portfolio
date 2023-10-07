@@ -1,1 +1,183 @@
+/*======================= 
+    <<  max-width: 1100px  >>  
+========================*/
 
+@media screen and (max-width: 1100px) {
+   .do__item {
+      width: 100%;
+   }
+
+   .resume__skills {
+      flex-direction: column;
+   }
+
+   .skills,
+   .resume-top__education,
+   .resume-top__experience {
+      width: 100%;
+   }
+
+   .skills {
+      margin-top: 13px;
+   }
+
+   .resume-top__experience {
+      margin-top: 18px;
+   }
+}
+
+
+
+/*======================= 
+    <<  max-width: 992px  >>  
+========================*/
+
+
+
+/* @media screen and (max-width: 992px) {
+  .title-h2__text {
+    font-size: 30px;
+    margin-right: 12px;
+  }
+  .about-me__title {
+    margin-bottom: 14px;
+  }
+  
+  .about-me__description {
+    margin-bottom: 16px;
+    font-size: 14px;
+    line-height: 1.42; 
+  }
+  .about-me__subtitle {
+    margin-bottom: 15px;
+  }
+  .title-h3 {
+    font-size: 26px;
+  }
+  .about-me__subtitle {
+    margin-bottom: 15px;
+  }
+  .title-h4 {
+    font-size: 18px;
+  }
+} */
+
+@media screen and (max-width: 992px) {
+   .section-navigation {
+      margin: 0 auto 131px;
+   }
+
+   .page {
+      flex-direction: column;
+      align-items: center;
+   }
+
+   .left {
+      width: 100%;
+   }
+
+   .about-me {
+      padding: 30px;
+   }
+
+   .do__item {
+      width: calc((100% - 27px) / 2);
+   }
+
+   .resume__top {
+      padding: 28px 30px 35px 30px;
+   }
+
+   .resume__bottom {
+      padding: 5px 30px 28px 30px;
+   }
+
+   .resume__skills {
+      flex-direction: row;
+   }
+
+   .skills,
+   .resume-top__education,
+   .resume-top__experience {
+      width: calc((100% - 30px) / 2);
+   }
+
+   .skills {
+      margin-top: 0px;
+   }
+
+   .resume-top__experience {
+      margin-top: 0;
+   }
+}
+
+/*======================= 
+    <<  max-width: 768px >>  
+========================*/
+
+@media screen and (max-width: 768px) {
+   .resume__skills {
+      flex-direction: column;
+   }
+
+   .skills {
+      width: 100%;
+   }
+
+   .skills {
+      margin-top: 13px;
+   }
+
+   .contact__info {
+      flex-direction: column;
+      gap: 15px;
+   }
+
+   .phone__block,
+   .email__block {
+      max-width: 100%;
+   }
+}
+
+
+/*======================= 
+    <<  max-width: 640px  >>  
+========================*/
+
+@media screen and (max-width: 640px) {
+   .section-navigation {
+      padding: 5px;
+   }
+
+   .navigation__list {
+      gap: 15px;
+   }
+
+   .navigation__link {
+      gap: 5px;
+      width: 60px;
+      height: 60px;
+   }
+
+   .title-h2__text {
+      font-size: 36px;
+      margin-right: 13px;
+   }
+
+   .title-h2__line {
+      width: 33%;
+   }
+
+   .do__item {
+      width: 100%;
+   }
+
+   .resume-top__education,
+   .resume-top__experience {
+      width: 100%;
+   }
+
+   .resume-top__experience {
+      margin-top: 18px;
+   }
+}
