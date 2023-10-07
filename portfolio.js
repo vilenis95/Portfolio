@@ -150,6 +150,46 @@ $(document).ready(function() {
             addBlockButton.show();
         }, 500);
     });
+
+    $('.toggle-list').click(function(e){
+        e.preventDefault();
+        $(this).text('Select category');
+        $(this).next('.sub-list').slideToggle();
+    });
+
+    // Обработка кликов на ссылки во втором списке
+    $('.work_tags_650px .sub-list a').click(function(e){
+        e.preventDefault();
+        let categoryID = $(this).data("id");
+        // Скрываем подсписок
+        $(this).closest('.sub-list').slideUp();
+        // Отображаем выбранную категорию
+        $('.work_tags_650px .toggle-list').text($(this).text());
+    
+        if (categoryID === undefined || categoryID === "All") {
+            $(".card").addClass("slide-out");
+            setTimeout(function() {
+                $(".card").hide().removeClass("slide-out");
+                $(".card").addClass("slide-in");
+                $(".card").show();
+            }, 500);
+        } else {
+            $(".card").addClass("slide-out");
+            setTimeout(function() {
+                $(".card").hide().removeClass("slide-out");
+                $(".card p[data-id='" + categoryID + "']").closest(".card").addClass("slide-in");
+                $(".card p[data-id='" + categoryID + "']").closest(".card").show();
+            }, 500);
+        }
+
+
+        addBlockButton.addClass("slide-out-button");
+        setTimeout(function() {
+            addBlockButton.removeClass("slide-out-button");
+            addBlockButton.addClass("slide-in-button");
+            addBlockButton.show();
+        }, 500);
+    });
 });
 
 
